@@ -1,68 +1,133 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+html, body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff1f2; /* tu color pastel de fondo */
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
+@layer base {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --primary: 330 100% 70%;                /* Rosa vibrante */
+    --primary-foreground: 0 0% 100%;        /* Blanco */
+  
+    --secondary: 250 100% 85%;              /* Púrpura pastel */
+    --secondary-foreground: 240 40% 20%;    /* Gris oscuro */
+  
+    --accent: 45 100% 85%;                  /* Amarillo pastel */
+    --accent-foreground: 30 50% 20%;
+  
+    --background: 345 100% 97%;             /* Rosa claro */
+    --foreground: 240 5% 20%;               /* Gris oscuro */
+  
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+  
+    --muted: 240 10% 90%;
+    --muted-foreground: 240 5% 30%;
+  
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+  
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 240 6% 90%;
+    --input: 240 6% 93%;
+    --ring: 330 100% 70%;
+  
+    --chart-1: 330 100% 70%;
+    --chart-2: 250 100% 85%;
+    --chart-3: 45 100% 85%;
+    --chart-4: 160 60% 70%;
+    --chart-5: 200 80% 80%;
+  
+    --radius: 1rem;
   }
-  a:hover {
-    color: #747bff;
+  :root[data-theme="default"]  {
+    --primary: 330 100% 70%;                /* Rosa vibrante */
+    --primary-foreground: 0 0% 100%;        /* Blanco */
+  
+    --secondary: 250 100% 85%;              /* Púrpura pastel */
+    --secondary-foreground: 240 40% 20%;    /* Gris oscuro */
+  
+    --accent: 45 100% 85%;                  /* Amarillo pastel */
+    --accent-foreground: 30 50% 20%;
+  
+    --background: 345 100% 97%;             /* Rosa claro */
+    --foreground: 240 5% 20%;               /* Gris oscuro */
+  
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+  
+    --muted: 240 10% 90%;
+    --muted-foreground: 240 5% 30%;
+  
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+  
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+  
+    --border: 240 6% 90%;
+    --input: 240 6% 93%;
+    --ring: 330 100% 70%;
+  
+    --chart-1: 330 100% 70%;
+    --chart-2: 250 100% 85%;
+    --chart-3: 45 100% 85%;
+    --chart-4: 160 60% 70%;
+    --chart-5: 200 80% 80%;
+  
+    --radius: 1rem;
   }
-  button {
-    background-color: #f9f9f9;
+
+  
+
+  :root[data-theme="sorpresa"] {
+    --primary: 200 100% 70%;         /* celeste */
+    --primary-foreground: 0 0% 100%;
+    --background: 50 100% 95%;       /* amarillo pastel */
+    --foreground: 240 100% 20%;
+    --accent: 320 100% 80%;          /* rosa fucsia */
+    --accent-foreground: 0 0% 100%;
+  }
+  * {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .theme-transition * {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+  }
+  
+  /* Modo oscuro */
+  .dark {
+    --background: 240 6% 10%;
+    --foreground: 0 0% 100%;
+  
+    --primary: 330 100% 70%;
+    --primary-foreground: 0 0% 100%;
+  
+    --secondary: 250 100% 85%;
+    --secondary-foreground: 0 0% 100%;
+  
+    /* ... puedes ajustar el resto si quieres invertir tonos */
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

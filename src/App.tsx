@@ -1,36 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Header } from "./components/layout/Header"
+import { ThemeSwitcher } from "./components/theme-switcher"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Gabriela te amo</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <div>
-          sadasd
-        </div>
-        <p>
-          GABRIELA TE AMO
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <Header />
+
+      <main className="pt-[300px] min-h-[200vh] px-6">
+        <section className="max-w-xl mx-auto py-20">
+          <h2 className="text-3xl font-bold text-primary">Nuestra historia</h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Aquí empieza todo con estilo Gucci y corazón colombiano.
+          </p>
+        </section>
+      </main>
+      <ThemeSwitcher />
+
     </>
   )
 }
