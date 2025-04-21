@@ -17,7 +17,7 @@ export function Header() {
             className={cn(
                 'fixed top-0 left-0 w-full z-50 flex justify-center items-start transition-all duration-700 ease-in-out',
                 isScrolled
-                    ? 'bg-white/80 py-2 backdrop-blur-md border-b border-zinc-200 shadow-sm'
+                    ? 'bg-primary/80 py-2 backdrop-blur-md border-b border-zinc-200 shadow-sm'
                     : 'bg-transparent py-32'
             )}
         >
@@ -28,13 +28,13 @@ export function Header() {
             >
                 <h1
                     className={cn(
-                        'font-display tracking-wide text-primary transition-all duration-700 ease-in-out',
+                        'font-display tracking-wide text-muted-foreground transition-all duration-700 ease-in-out',
                         isScrolled
-                            ? 'text-3xl md:text-5xl'
-                            : 'text-[18vw] md:text-[10vw]'
+                            ? 'text-3xl md:text-5xl text-muted-foreground'
+                            : 'text-[18vw] md:text-[10vw] text-muted-foreground'
                     )}
                 >
-                    GABRIELA
+                    Gabi
                 </h1>
             </div>
         </header>

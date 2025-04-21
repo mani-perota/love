@@ -12,81 +12,77 @@ html, body {
 }
 
 
+@keyframes float-up {
+  0% {
+    transform: translateY(100vh) scale(0.8) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20vh) scale(1.1) rotate(360deg);
+    opacity: 0;
+  }
+}
 
+.butterfly {
+  position: absolute;
+  bottom: -40px;
+  font-size: 1.5rem;
+  animation: float-up linear infinite;
+  z-index: 30;
+  pointer-events: none;
+}
 @layer base {
   :root {
-    --primary: 330 100% 70%;                /* Rosa vibrante */
-    --primary-foreground: 0 0% 100%;        /* Blanco */
+    --background: #FDEFF4;             /* Fondo general suave */
+    --foreground: #2D1E2F;             /* Texto elegante y oscuro */
   
-    --secondary: 250 100% 85%;              /* Púrpura pastel */
-    --secondary-foreground: 240 40% 20%;    /* Gris oscuro */
+    --primary: #F2CFCF;                /* Rosa palo base */
+    --primary-foreground: white;
   
-    --accent: 45 100% 85%;                  /* Amarillo pastel */
-    --accent-foreground: 30 50% 20%;
+    --secondary: #E8B9C3;              /* Rosa desaturado para hover, botones */
+    --secondary-foreground: #2D1E2F;
   
-    --background: 345 100% 97%;             /* Rosa claro */
-    --foreground: 240 5% 20%;               /* Gris oscuro */
+    --accent: #C57BA7;                 /* Rosa fuerte para detalles */
+    --accent-foreground: white;
   
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --muted: #D8A7B1;                  /* Rosa viejo suave */
+    --muted-foreground: #2D1E2F;
   
-    --muted: 240 10% 90%;
-    --muted-foreground: 240 5% 30%;
+    --card: #F8E1E7;                   /* Fondo tipo carta romántica */
+    --card-foreground: #2D1E2F;
   
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-  
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
-  
-    --border: 240 6% 90%;
-    --input: 240 6% 93%;
-    --ring: 330 100% 70%;
-  
-    --chart-1: 330 100% 70%;
-    --chart-2: 250 100% 85%;
-    --chart-3: 45 100% 85%;
-    --chart-4: 160 60% 70%;
-    --chart-5: 200 80% 80%;
-  
-    --radius: 1rem;
+    --border: #D6B27D;                 /* Dorado suave para detalles */
+    --input: #F2CFCF;
+    --ring: #C57BA7;
   }
   :root[data-theme="default"]  {
-    --primary: 330 100% 70%;                /* Rosa vibrante */
-    --primary-foreground: 0 0% 100%;        /* Blanco */
+    --background: #FDEFF4;             /* Fondo general suave */
+    --foreground: #2D1E2F;             /* Texto elegante y oscuro */
   
-    --secondary: 250 100% 85%;              /* Púrpura pastel */
-    --secondary-foreground: 240 40% 20%;    /* Gris oscuro */
+    --primary: #F2CFCF;                /* Rosa palo base */
+    --primary-foreground: white;
   
-    --accent: 45 100% 85%;                  /* Amarillo pastel */
-    --accent-foreground: 30 50% 20%;
+    --secondary: #E8B9C3;              /* Rosa desaturado para hover, botones */
+    --secondary-foreground: #2D1E2F;
   
-    --background: 345 100% 97%;             /* Rosa claro */
-    --foreground: 240 5% 20%;               /* Gris oscuro */
+    --accent: #C57BA7;                 /* Rosa fuerte para detalles */
+    --accent-foreground: white;
   
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --muted: #D8A7B1;                  /* Rosa viejo suave */
+    --muted-foreground: #2D1E2F;
   
-    --muted: 240 10% 90%;
-    --muted-foreground: 240 5% 30%;
+    --card: #F8E1E7;                   /* Fondo tipo carta romántica */
+    --card-foreground: #2D1E2F;
   
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
-  
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
-  
-    --border: 240 6% 90%;
-    --input: 240 6% 93%;
-    --ring: 330 100% 70%;
-  
-    --chart-1: 330 100% 70%;
-    --chart-2: 250 100% 85%;
-    --chart-3: 45 100% 85%;
-    --chart-4: 160 60% 70%;
-    --chart-5: 200 80% 80%;
-  
-    --radius: 1rem;
+    --border: #D6B27D;                 /* Dorado suave para detalles */
+    --input: #F2CFCF;
+    --ring: #C57BA7;
   }
 
   
